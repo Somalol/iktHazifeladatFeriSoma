@@ -1,0 +1,60 @@
+.card {
+  background-color: black;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
+  padding: 10px;
+  max-width: fit-content;
+  margin: 10px auto;
+  color: white;
+}
+
+.expired {
+  background-color: black;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #D91A1A;
+  padding: 10px;
+  max-width: fit-content;
+  margin: 10px auto;
+  color: white;
+}
+
+.finished {
+  background-color: black;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #52FF00;
+  padding: 10px;
+  max-width: fit-content;
+  margin: 10px auto;
+  color: white;
+}
+
+.pending {
+  background-color: black;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #2587c9;
+  padding: 10px;
+  max-width: fit-content;
+  margin: 10px auto;
+  color: white;
+}
+
+.warning {
+  background-color: black;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #FFB800;
+  padding: 10px;
+  max-width: fit-content;
+  margin: 10px auto;
+  color: white;
+}
+
+html {
+  background-color: gray;
+  text-align: center;
+  margin: auto;
+}
