@@ -58,3 +58,31 @@ html {
   text-align: center;
   margin: auto;
 }
+
+.tantargy {
+  padding-left: 80px;
+  float: left;
+}
+
+.tantargyInput {
+  margin: 0px 30px;
+  float: left;
+}
+
+.feladas {
+  padding-right: 255px;
+  float: right;
+}
+
+.feladasInput {
+  margin-right: 30px;
+}
+
+.bovebbLeiras {
+  margin-right: 30px;
+}
+
+.leadasInput {
+  margin-right: 240px;
+  float: right;
+}

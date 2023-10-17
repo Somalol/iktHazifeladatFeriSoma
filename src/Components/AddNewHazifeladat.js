@@ -3,12 +3,12 @@ import classes from "./Style.module.css";
 import Card from "./Card";
 
 export default function AddNewHazifeladat(props) {
-  const orszag = useRef();
-  const varos = useRef();
-  const datum = useRef();
-  const transzport = useRef();
-  const prio = useRef();
-  const kep = useRef();
+  const tantargy = useRef();
+  const temakor = useRef();
+  const feladas = useRef();
+  const leadas = useRef();
+  const leiras = useRef();
+  const tipus = useRef();
 
   function formHandler(e) {
     e.preventDefault();
@@ -17,12 +17,12 @@ export default function AddNewHazifeladat(props) {
   function submitHandler() {
     const actualData = {
       id: Math.round(Math.random() * 10),
-      orszag: orszag.current.value,
-      varos: varos.current.value,
-      datum: datum.current.value,
-      transzport: transzport.current.value,
-      prio: prio.current.value,
-      kep: kep.current.value
+      tantargy: tantargy.current.value,
+      temakor: temakor.current.value,
+      feladas: feladas.current.value,
+      leadas: leadas.current.value,
+      leiras: leiras.current.value,
+      tipus: tipus.current.value
     };
 
     props.onSaveHandler(actualData);
@@ -30,53 +30,28 @@ export default function AddNewHazifeladat(props) {
 
   return (
     <Card className={classes.card}>
-        <form onSubmit={formHandler}>
-            <label>Ország: </label>
-            <input type="text" placeholder="Ország" id="orszag" ref={orszag} />
+        <h1>Új házifeladat felvétele</h1>
+        <hr />
 
-            <br />
-            <br />
+        <form>
+          <label className={classes.tantargy}>Tantárgy:</label>
+          <label className={classes.feladas}>Feladás napja:</label> <br />
 
-            <label>Város: </label>
-            <input type="text" placeholder="Város" id="varos" ref={varos} />
+          <input className={classes.tantargyInput} type="text" placeholder="Tantárgy"></input>
+          <input className={classes.feladasInput} type="date"></input>
+          <input className={classes.bovebbLeiras} type="text" placeholder="Bővebb leírás..."></input>
 
-            <br />
-            <br />
+          <br />
 
-            <label>Dátum: </label>
-            <input type="date" id="datum" ref={datum} />
+          <label className={classes.tantargy}>Témakör:</label>
+          <label className={classes.feladas}>Leadás napja:</label> <br />
 
-            <br />
-            <br />
+          <input className={classes.tantargyInput} type="text" placeholder="Témakör"></input>
+          <input className={classes.leadasInput} type="date"></input>
 
-            <label>Transzport: </label>
-            <select ref={transzport}>
-            <option value="auto">Autó</option>
-            <option value="hajo">Hajó</option>
-            <option value="repcsi">Repülő</option>
-            <option value="vonat">Vonat</option>
-            </select>
+          <br />
 
-            <br />
-            <br />
 
-            <label>Prioritás: </label>
-            <select ref={prio}>
-            <option value="alacsony">Alacsony</option>
-            <option value="kozepes">Közepes</option>
-            <option value="magas">Magas</option>
-            </select>
-
-            <br />
-            <br />
-
-            <label>Kép (link): </label>
-            <input type="text" placeholder="Link" id="kep" ref={kep} />
-
-            <br />
-            <br />
-
-            <input type="submit" id="gomb" value="Mentés" onClick={submitHandler} />
         </form>
     </Card>
   );

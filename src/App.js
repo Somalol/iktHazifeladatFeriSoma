@@ -1,6 +1,7 @@
 import './App.css';
 import Calendar from './Components/Calendar';
 import AddNewHazifeladat from './Components/AddNewHazifeladat';
+import DataList from "./Components/DataList";
 import { useCallback, useState, useEffect } from "react";
 import classes from "./Components/Style.module.css";
 
@@ -56,6 +57,7 @@ export default function App()
   return (
     <div>
       <AddNewHazifeladat onSaveHandler={saveData} />
+      <DataList data={data} />
     </div>
   );
 }
